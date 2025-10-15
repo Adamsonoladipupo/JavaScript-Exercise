@@ -1,2 +1,2 @@
 word = 'semicolon'
-print(word[0:-1:-1]);
+print(word[-1:0:-1]);
