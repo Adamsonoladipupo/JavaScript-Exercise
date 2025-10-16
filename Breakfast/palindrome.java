@@ -19,7 +19,7 @@ public class palindrome{
 			newNumber = storeNumberInitialValue % 10;
 			System.out.println(newNumber);
 			storeNumberInitialValue = storeNumberInitialValue / 10;
-			palindrome = Math.pow(10, count-1)( newNumber);
+			palindrome = newNumber * (Math.pow(10, count-1));
 			palindromes += palindrome;
 			System.out.println(palindrome);
 		}
