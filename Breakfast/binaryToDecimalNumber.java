@@ -1,12 +1,14 @@
 public class binaryToDecimalNumber{
 	public static void main(String[] args){
 		int binaryNumber = 1111011;
-	
-		while (binaryNumber % 10 != 0 || binaryNumber / 10 != 0){
-			digitsOfNumbers = number % 10;
-			number = number / 10;
-			numberOfDigits ++;
-			System.out.println(digitsOfNumbers);
+		String binaryNumberToString = binaryNumber + "";
+		char binaryNumberToChar = '';
+
+		for (int count = 1; count <= binaryNumberToString.length(); count++){
+			binaryNumberToChar = binaryNumberToString.charAt(count) * Math.pow(2,count)
 		}
+		
+
+		System.out.print(binaryNumberToChar);
 	}
 }
