@@ -1,6 +1,6 @@
-public class largestDigitsInNumber{
+public class smallestDigitsInANumber{
 	public static void main(String[] args){
-		int number = 43875955;
+		int number = 4387555;
 		int initialNumberValue = number;
 		int numberOfDigits = 0;
 		int digitsOfNumbers = 0;
@@ -11,7 +11,7 @@ public class largestDigitsInNumber{
 			numberOfDigits ++;
 		}
 
-		int largest = initialNumberValue % 10;
+		int smallest = initialNumberValue % 10;
 		initialNumberValue = initialNumberValue / 10;
 		int digits = 0;
 
@@ -21,11 +21,11 @@ public class largestDigitsInNumber{
 	
 			//System.out.printf("digits %d %n", digits);
 			
-			if (digits > largest){
-				largest = digits;
+			if (digits < smallest){
+				smallest = digits;
 			}
 		}
-		System.out.printf("largest number is : %d", largest);
+		System.out.printf("Smallest number is : %d", smallest);
 		
 	}
 }
