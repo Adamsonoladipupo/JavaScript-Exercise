@@ -1,9 +1,15 @@
 public class primeNumbers{
 	public static void main(String[] args){
-		int factors = 0;
-		for (int count = 1; count <= 100; count++){
-			if (100 % count == 0 ){
-				System.out.println(count);
+		int factor = 0;
+		for (int count = 2; count < 100; count++){
+			for (int counter = 2; counter <= count; counter++){
+				if (counter % count != 0 ){
+					factor++;
+				}
+				if (factor == 0){
+					System.out.println(count);
+				}
+				
 			}
 		}
 	}
