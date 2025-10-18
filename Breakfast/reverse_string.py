@@ -1,3 +1,4 @@
 word = 'semicolon'
 for count in word:
-	print(count)
+	for _ in range (len(word)*-1, 0):
+		print(count)
