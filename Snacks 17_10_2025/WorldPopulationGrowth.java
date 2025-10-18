@@ -20,13 +20,16 @@ public class WorldPopulationGrowth{
 		double population = 0;
 		double initial = 8.23;
 		double increasePolulation = 0;
+		double pupulationX2 = 0;
 
 		System.out.println("Year	Anticipated Population	Increase Population");
 		for (int count = 1; count <=75; count++){
 			population = 8.23 * Math.pow(2.71828, (0.0084*count));
 			increasePolulation = population - initial;
 			System.out.printf("%d	%.2fB			%.2fB %n",count, population, increasePolulation);
+			
 		}
+		
 	}
 
 }
