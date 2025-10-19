@@ -22,8 +22,7 @@ public class GCDOfNumbers{
 				System.out.println(count);
 				GCD = count;
 			}
-		System.out.println(count);
 		}
-		System.out.printf("The GCD is : %d", count);
+		System.out.printf("The GCD is : %d", GCD);
 	}
 }
