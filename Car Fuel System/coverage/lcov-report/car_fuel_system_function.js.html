@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Code coverage report for car_fuel_system_functions.js</title>
+    <title>Code coverage report for car_fuel_system_function.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="prettify.css" />
     <link rel="stylesheet" href="base.css" />
@@ -19,34 +19,34 @@
 <body>
 <div class='wrapper'>
     <div class='pad1'>
-        <h1><a href="index.html">All files</a> car_fuel_system_functions.js</h1>
+        <h1><a href="index.html">All files</a> car_fuel_system_function.js</h1>
         <div class='clearfix'>
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80.48% </span>
+                <span class="strong">84.61% </span>
                 <span class="quiet">Statements</span>
-                <span class='fraction'>33/41</span>
+                <span class='fraction'>33/39</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">70% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>7/10</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
                 <span class="strong">100% </span>
-                <span class="quiet">Branches</span>
-                <span class='fraction'>7/7</span>
-            </div>
-        
-            
-            <div class='fl pad1y space-right2'>
-                <span class="strong">80% </span>
                 <span class="quiet">Functions</span>
-                <span class='fraction'>4/5</span>
+                <span class='fraction'>4/4</span>
             </div>
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">80.48% </span>
+                <span class="strong">84.61% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>33/41</span>
+                <span class='fraction'>33/39</span>
             </div>
         
             
@@ -101,33 +101,22 @@
 <a name='L36'></a><a href='#L36'>36</a>
 <a name='L37'></a><a href='#L37'>37</a>
 <a name='L38'></a><a href='#L38'>38</a>
-<a name='L39'></a><a href='#L39'>39</a>
-<a name='L40'></a><a href='#L40'>40</a>
-<a name='L41'></a><a href='#L41'>41</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
+<a name='L39'></a><a href='#L39'>39</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">2x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">4x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
-<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -135,62 +124,67 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">&nbsp;
-function car_starter( car_fuel_tank, car_key){
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span></td><td class="text"><pre class="prettyprint lang-js">function start_car(car_key, fuel_level){
     let car_started = false;
-    if (car_fuel_tank &gt; 0 &amp;&amp; car_key == true){
+    if (car_key == true &amp;&amp; fuel_level &gt; 0){
         car_started = true
     }
+    else if(car_key == false &amp;&amp; fuel_level &gt; 0)<span class="branch-0 cbranch-no" title="branch not covered" >{</span>
+<span class="cstat-no" title="statement not covered" >        let message = "Car key if off";</span>
+<span class="cstat-no" title="statement not covered" >        return message</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
+    else if (car_key == true<span class="branch-0 cbranch-no" title="branch not covered" > &amp;&amp; fuel_level &lt; 1)<span class="branch-0 cbranch-no" title="branch not covered" ></span>{</span>
+<span class="cstat-no" title="statement not covered" >        let message = "Your fuel tan kis empty";</span>
+<span class="cstat-no" title="statement not covered" >        return message;</span>
+<span class="cstat-no" title="statement not covered" >    }</span>
     else{
-        car_started = false;
+        car_started = false
     }
-    return car_started
+    return car_started;
 }
 &nbsp;
-function check_fuel_level(car_fuel_tank){
-    //console.log("Car fuel level is: ", car_fuel_tank);
-    return car_fuel_tank;
+function check_fuel(fuel_level){
+    return fuel_level;
 }
 &nbsp;
-<span class="cstat-no" title="statement not covered" ><span class="fstat-no" title="function not covered" >function car_driving_status(car_key, driving){</span></span>
-<span class="cstat-no" title="statement not covered" >    if (car_key == false){</span>
-<span class="cstat-no" title="statement not covered" >        driving = false</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" >    else{</span>
-<span class="cstat-no" title="statement not covered" >        driving = true</span>
-<span class="cstat-no" title="statement not covered" >    }</span>
-<span class="cstat-no" title="statement not covered" >}</span>
-function fuel_car(car_fuel_tank, fuel_amount){
-    if( fuel_amount + car_fuel_tank &gt; 50){
-        throw new Error ("The 50 Liters car capacity has been exeeded!");
+function car_state(car_key){
+    let is_driving = false;
+    if(car_key == true){
+        is_driving = true;
     }
-    if ( fuel_amount + car_fuel_tank &lt;= 50){
-        car_fuel_tank += fuel_amount;
-        return car_fuel_tank;
+    else{
+        is_driving = false;
     }
+    return is_driving;
 }
 &nbsp;
-function fuel_consumed(distance, fuel_efficiency){
-    let fuel_consumed = distance/ fuel_efficiency;
+function fuel_consumed(FUEL_EFFICIENCY, distance_traveled){
+    let fuel_consumed = distance_traveled / FUEL_EFFICIENCY;
     return fuel_consumed;
 }
-&nbsp;
-module.exports = {car_starter, check_fuel_level, fuel_car, car_driving_status, fuel_consumed}</pre></td></tr></table></pre>
+module.exports = {start_car, check_fuel, car_state, fuel_consumed}</pre></td></tr></table></pre>
 
                 <div class='push'></div><!-- for sticky footer -->
             </div><!-- /wrapper -->
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2025-11-23T04:19:18.518Z
+                at 2025-11-24T21:05:25.283Z
             </div>
         <script src="prettify.js"></script>
         <script>

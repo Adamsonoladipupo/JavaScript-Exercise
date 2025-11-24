@@ -1,38 +1,24 @@
-const {car_starter, fuel_car, check_fuel_level, fuel_consumed} = require("./car_fuel_system_functions")
+const {start_car, check_fuel, car_state, fuel_consumed} = require("./car_fuel_system_function")
 
-describe ('Testing simple fuel system function ',()=>{
-
-    test('testing to see if car will not start if the fuel level is zero, empty ', ()=> {
-        expect(car_starter(0,true)).toBeFalsy();
+describe ("Testing the car fuel system functions", ()=>{
+    test("testing if the car started function can't start the car when key if off, and fuel level is 0", ()=>{
+        expect(start_car(false, 0)).toBeFalsy();
     })
-
-    test('testing to see if car will start if the fuel level is above zero, not empty ', ()=> {
-        expect(car_starter(4,true)).toBeTruthy();
+    test("test if the car will start if car key is on and fuel tank is not empty", ()=>{
+        expect(start_car(true, 5)).toBeTruthy();
     })
-
-    test('testing to see if car will start if car key is on ', ()=> {
-        expect(car_starter(50,true)).toBeTruthy();
+    test("testing if check fuel function will return car fuel level", ()=>{
+        expect(check_fuel(6)).toEqual(6);
     })
-
-    test('testing to see if car will stop if car key is off ', ()=> {
-        expect(car_starter(50,false)).toBeFalsy();
+    test("test if car is not driving when key is off", ()=>{
+        expect(car_state(false)).toBeFalsy();
     })
-
-    test('testing if car can be refueled', ()=>{
-        expect(fuel_car(1, 40)).toEqual(41);
+    test("test if car is driving when key is on", ()=>{
+        expect(car_state(true)).toBeTruthy();
     })
-
-    test('testing if car can be refueled beyond its capacity 50L', ()=>{
-        expect(()=>fuel_car(40,40)).toThrow("The 50 Liters car capacity has been exeeded!");
+    test("testing fuel consumed knowing distance covered and fuel efficiency", ()=>{
+        FUEL_EFFICIENCY = 15; // this mean that the car can travel 15km using 1 liter of fuel
+        distance = 100
+        expect(fuel_consumed(FUEL_EFFICIENCY, distance)).toBeGreaterThanOrEqual(6.66);
     })
-
-    test("checking car fuel level", ()=>{
-        expect(check_fuel_level(40)).toEqual(40);
-    })
-
-    test("testing if car can be driven", ()=>{
-        const FUEL_EFFICIENCY = 15; // 15kml mean the car can cover 15km using 1 liter of fuel
-        expect(fuel_consumed(100, FUEL_EFFICIENCY)).toBeGreaterThanOrEqual(6.66)
-    })
-
 })

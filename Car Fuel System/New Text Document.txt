@@ -1,4 +1,0 @@
-component of the fuel system
-fuel tank ( Integer can range from 0 - 50)
-fuel monitor ()
-starter Key Boolean (on,, off)
