@@ -11,7 +11,7 @@ public class AutomaticBike {
         this.bikeKey = key;
     }
 
-    AutomaticBike(boolean key, int speed, int gear){
+    AutomaticBike(int speed, int gear){
         this.speed = speed;
         this.gear = gear;
     }
@@ -29,7 +29,7 @@ public class AutomaticBike {
         return turnedOn;
     }
 
-    public void changeSpeed(int speed){
+    public void changeGear(int speed){
         if (speed >= 0 && speed <= 20){
             gear = 1;
         }
@@ -50,6 +50,44 @@ public class AutomaticBike {
 
     public int getBikeGear(){
         return gear;
+    }
+
+    public void accelerateBike(){
+        if(gear == 1){
+            speed += 1;
+            changeGear(speed);
+        }
+        if(gear == 2){
+            speed += 2;
+            changeGear(speed);
+        }
+        if(gear == 3){
+            speed += 3;
+            changeGear(speed);
+        }
+        if(gear == 4){
+            speed += 4;
+            changeGear(speed);
+        }
+    }
+
+    public void deccelerateBike(){
+        if(gear == 1){
+            speed -= 1;
+            changeGear(speed);
+        }
+        if(gear == 2){
+            speed -= 2;
+            changeGear(speed);
+        }
+        if(gear == 3){
+            speed -= 3;
+            changeGear(speed);
+        }
+        if(gear == 4){
+            speed -= 4;
+            changeGear(speed);
+        }
     }
 
 }
